@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: 'Kusanagi';
+  src: url('../../public/fonts/Kusanagi.otf') format('otf');
+}
+.special-font-class{
+  font-family: 'Kusanagi',sans-serif;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -74,3 +84,4 @@
     @apply bg-background text-foreground;
   }
 }
+
