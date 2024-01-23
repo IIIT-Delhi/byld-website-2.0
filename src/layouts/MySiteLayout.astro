@@ -9,10 +9,13 @@ import Footer from '../components/Footer.astro'
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
   </head>
-  <body class="overflow-x-hidden">
-    <Navbar/>
-    <slot/>
-    <Footer/>
+  <body>
+    <div class="overflow-x-hidden">
+      <Navbar/>
+        <slot/>
+      <Footer/>
+    </div>
+    
     
   </body>
 </html>
