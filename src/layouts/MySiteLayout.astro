@@ -1,6 +1,6 @@
 ---
-import Navbar from '../components/Navbar.astro'
-import Footer from '../components/Footer.astro'
+import Footer from '@/components/Footer.astro'
+import Navbar from "@/components/Navbar.tsx"
 ---
 
 <html lang="en">
@@ -11,7 +11,7 @@ import Footer from '../components/Footer.astro'
   </head>
   <body class="overflow-y-hidden">
     <div class="overflow-x-hidden">
-      <Navbar/>
+	<Navbar client:idle/>
         <slot/>
       <Footer/>
     </div>
