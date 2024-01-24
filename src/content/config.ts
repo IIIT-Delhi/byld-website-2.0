@@ -36,5 +36,6 @@ const projectCollection = defineCollection({
 // 3. Export a single `collections` object to register your collection(s)
 export const collections = {
   'events': eventCollection,
-  'hackathons':hackathonCollection
+  'hackathons':hackathonCollection,
+  'projects':projectCollection,
 };
