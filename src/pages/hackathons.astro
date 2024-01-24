@@ -1,0 +1,72 @@
+---
+import "@/styles/globals.css"
+import MySiteLayout from "@/layouts/MySiteLayout.astro";
+import { getCollection } from "astro:content";
+const hackathons = await getCollection("hackathons")
+
+---
+
+
+<MySiteLayout>
+    
+    <div class='pl-[182px] pt-[52px] flex flex-col space-y-[106px]'>
+        <div class='flex flex-col gap-[46px]'>
+            <div class="uppercase special-font-class text-[80px]">Hackathons</div>
+            <div class="max-w-[65dvw] text-[32px] font-spaceGrotesk text-[#5F8785] font-medium">
+                Hackathons are IIIT Delhi's internal competitions organized by Byld for members and 
+                non-members of the club. Students participate and work overnight in teams of 3-4 and 
+                develop softwares on a given topic. The teams that finish at the top in a Hackathon are 
+                recruited into the club.
+            </div>
+        </div>
+        <div>
+            <div class="uppercase special-font-class text-[80px]">Upcoming Hackathons</div>
+            {
+                hackathons.map((h)=>{
+                    let currentDate = new Date();
+                    if (new Date(h.data.date).getTime() > currentDate.getTime()) {
+                        <div class="">
+                            
+                        
+                        </div>
+                    } 
+                })
+            }
+        </div>
+        <div class="flex flex-col space-y-[30px]">
+            <div class="uppercase special-font-class text-[80px]">Past Hackathons</div>
+            <div class="grid grid-cols-3">
+                {
+                hackathons.map((h)=>{
+                    
+                    let currentDate = new Date();
+                    if(currentDate>h.data.date){
+                        {return (
+                            <div class="flex flex-col gap-5">
+                                <div>
+                                    <img class="rounded-[22px]" src={h.data.image}/>
+                                </div>
+                                <div class="font-spaceGrotesk text-[25px]">{h.data.title}</div>
+                                <div>{h.data.date}</div>
+                                <div class="flex flex-row space-x-5">
+                                    {h.data.judges && h.data.judges.map((judge)=>
+                                    <div>
+                                        {judge}
+                                    </div>
+                                    )}
+                                </div>
+                                <div>{h.data.link}</div>
+                            </div>
+                        )}
+                    } 
+                })
+                }
+            </div>
+            
+        </div>
+
+
+
+    </div>
+
+</MySiteLayout>
