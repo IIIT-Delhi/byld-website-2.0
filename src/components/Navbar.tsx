@@ -39,7 +39,7 @@ export default function Navbar() {
                   )}
                 >
                   <NavigationMenuLink asChild>
-                    <a href="/" className="text-sm p-2">
+                    <a href="/" className="text-sm p-2 font-spaceGrotesk">
                       Link
                     </a>
                   </NavigationMenuLink>
@@ -50,7 +50,7 @@ export default function Navbar() {
                     navigationMenuTriggerStyle(),
                   )}
                 >
-                  <a href="/#">Members</a>
+                  <a href="/#" className="font-spaceGrotesk">Members</a>
                 </li>
                 <li
                   className={cn(
@@ -58,7 +58,7 @@ export default function Navbar() {
                     navigationMenuTriggerStyle(),
                   )}
                 >
-                  <a href="/#">Events</a>
+                  <a href="/#" className="font-spaceGrotesk">Events</a>
                 </li>
                 <li
                   className={cn(
@@ -66,7 +66,7 @@ export default function Navbar() {
                     navigationMenuTriggerStyle(),
                   )}
                 >
-                  <a href="/#">Projects</a>
+                  <a href="/#" className="font-spaceGrotesk">Projects</a>
                 </li>{" "}
                 <li
                   className={cn(
@@ -74,7 +74,7 @@ export default function Navbar() {
                     navigationMenuTriggerStyle(),
                   )}
                 >
-                  <a href="/#">Contact Us</a>
+                  <a href="/#" className="font-spaceGrotesk">Contact Us</a>
                 </li>
               </ul>{" "}
             </NavigationMenuContent>
