@@ -58,7 +58,7 @@ export default function Navbar() {
                     navigationMenuTriggerStyle(),
                   )}
                 >
-                  <a href="/#" className="font-spaceGrotesk">Events</a>
+                  <a href="/#" className="font-spaceGrotesk ">Events</a>
                 </li>
                 <li
                   className={cn(
