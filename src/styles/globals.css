@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "Kusanagi";
-  src: url("/public/fonts/Kusanagi.woff") format("woff");
+  src: url("/fonts/Kusanagi.woff") format("woff");
 }
 .special-font-class {
   font-family: "Kusanagi", sans-serif;
