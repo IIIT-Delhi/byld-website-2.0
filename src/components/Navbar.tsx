@@ -13,7 +13,7 @@ import byldLogo from "../assets/byld-logo.png";
 
 export default function Navbar() {
 	return (
-		<div className="flex sticky bg-white z-50 bg-opacity-20 backdrop-blur-xl top-0 flex-row items-center justify-between h-[96px] py-[27px] md:px-16 sm:px-10 px-2.5 ">
+		<div className="flex sticky bg-gradient-to-b from-[#20757060] to-white bg-white z-50 bg-opacity-20 backdrop-blur-xl top-0 flex-row items-center justify-between h-[96px] py-[27px] md:px-16 sm:px-10 px-2.5 ">
 			<NavigationMenu>
 				<NavigationMenuList>
 					<NavigationMenuItem>
