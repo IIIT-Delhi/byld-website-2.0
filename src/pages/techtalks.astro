@@ -1,0 +1,106 @@
+---
+import "@/styles/globals.css"
+import MySiteLayout from "@/layouts/MySiteLayout.astro";
+import { getCollection } from "astro:content";
+const techtalks = await getCollection("techtalks");
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
+import { EventCard } from "@/components/EventCard";
+let length=0;
+---
+
+
+<MySiteLayout>
+    
+    <div class='xl:px-[150px] pl-[30px] md:px-[60px] pt-[52px] flex flex-col space-y-[106px] mb-10'>
+        <div class='flex flex-col gap-[46px]'>
+            <div class="uppercase special-font-class lg:text-[50px] text-[30px]">Techtalks</div>
+            <div class="max-w-[65dvw] lg:text-[25px] text-[20px] font-spaceGrotesk text-[#5F8785] font-medium">
+                
+                Tech Talks are technical seminars where students or invited guests from companies talk 
+                about some cool opportunity in software development or any major engineering challenges they overcame.
+            </div>
+        </div>
+        <div class="flex flex-col space-y-5">
+            <div class="uppercase special-font-class lg:text-[50px] text-[30px]">Upcoming Techtalks</div>
+            <div class="flex flex-wrap gap-10 lg:grid lg:grid-cols-3">
+                {
+            
+                    techtalks.map((h) => {
+                        
+                        const currentDate = new Date();
+                        const formattedDate = new Intl.DateTimeFormat('en-US', {
+                            day: 'numeric',
+                            month: 'long',
+                            year: 'numeric',
+                            }).format(h.data.date);
+                        if (new Date(h.data.date).getTime() > currentDate.getTime()) {
+                            length++;
+                            return (
+                                <div>
+                                   <EventCard title={h.data.name} date={formattedDate} description={`Speaker: ${h.data.speaker}`} 
+                                   image={h.data.image ?? 'https://img.freepik.com/free-vector/hackathon-doodle-hand-drawing-team-programmers-web-developers-managers-graphic-designers-deve_88138-1348.jpg'}
+                                   href={h.data.link ?? '/'}/> 
+                                </div>
+                            );
+                        }
+                
+                        
+                    })}
+            </div>
+        
+            {length == 0 && <div class="font-spaceGrotesk pt-5 text-[#5F8785] text-[25px]">No upcoming techtalks. Stay Tuned!</div>}
+             
+        </div>
+        <div class="flex flex-col space-y-[30px] special-font-class text-[28px]">
+            <div class="uppercase special-font-class lg:text-[50px] text-[30px]">Past Techtalks</div>
+            <Table className="max-w-[1240px]">
+                <TableHeader>
+                    <TableHead>Date</TableHead>
+                    <TableHead>Topic</TableHead>
+                    <TableHead>Speaker</TableHead>
+                </TableHeader>
+                
+            
+                <TableBody> 
+                {
+                techtalks.map((h,i)=>{
+                    
+                    let currentDate = new Date();
+                    if(currentDate>h.data.date){
+                        const date = new Date(h.data.date)
+                        const formattedDate = new Intl.DateTimeFormat('en-US', {
+                        day: 'numeric',
+                        month: 'long',
+                        year: 'numeric',
+                        }).format(date);
+                                            
+                        {return (
+                        <TableRow key={i} className="font-spaceGrotesk text-[19px]">
+                            <TableCell>{formattedDate}</TableCell>
+                            <TableCell>{h.data.name}</TableCell>
+                            <TableCell className="flex flex-row space-x-1">
+                               {h.data.speaker}
+                            </TableCell>
+                        </TableRow>
+                        )}
+                    } 
+                })
+                }
+              </TableBody>
+            </Table>
+            
+        </div>
+
+
+
+    </div>
+
+</MySiteLayout>

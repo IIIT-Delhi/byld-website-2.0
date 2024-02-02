@@ -2,7 +2,7 @@
 import "@/styles/globals.css"
 import MySiteLayout from "@/layouts/MySiteLayout.astro";
 import { getCollection } from "astro:content";
-const hackathons = await getCollection("hackathons")
+const hacknights = await getCollection("hacknights")
 import {
   Table,
   TableBody,
@@ -19,22 +19,21 @@ let length=0;
 
 <MySiteLayout>
     
-    <div class='xl:px-[150px] pl-[30px] md:px-[60px] pt-[52px] flex flex-col space-y-[70px] mb-10'>
-        <div class='flex flex-col gap-[32px]'>
-            <div class="uppercase special-font-class lg:text-[50px] text-[30px]">Hackathons</div>
-            <div class="max-w-[65dvw] lg:text-[20px] text-[15px] font-spaceGrotesk text-[#5F8785] font-medium">
-                Hackathons are IIIT Delhi's internal competitions organized by Byld for members and 
-                non-members of the club. Students participate and work overnight in teams of 3-4 and 
-                develop softwares on a given topic. The teams that finish at the top in a Hackathon are 
-                recruited into the club.
+    <div class='xl:px-[150px] pl-[30px] md:px-[60px] pt-[52px] flex flex-col space-y-[106px] mb-10'>
+        <div class='flex flex-col gap-[46px]'>
+            <div class="uppercase special-font-class lg:text-[50px] text-[30px]">Hacknights</div>
+            <div class="max-w-[65dvw] lg:text-[25px] text-[20px] font-spaceGrotesk text-[#5F8785] font-medium">
+                
+                Hack Nights are weekly events organized and managed by Byld where club members share their knowledge of a software technology with the students. 
+                Hack Nights also include an interactive session where students sit together with their machines and code.
             </div>
         </div>
         <div class="flex flex-col space-y-5">
-            <div class="uppercase special-font-class lg:text-[50px] text-[30px]">Upcoming &nbsp; Hackathons</div>
+            <div class="uppercase special-font-class lg:text-[50px] text-[30px]">Upcoming Hacknights</div>
             <div class="flex flex-wrap gap-10 lg:grid lg:grid-cols-3">
                 {
             
-                    hackathons.map((h) => {
+                    hacknights.map((h) => {
                         
                         const currentDate = new Date();
                         const formattedDate = new Intl.DateTimeFormat('en-US', {
@@ -45,12 +44,11 @@ let length=0;
                         if (new Date(h.data.date).getTime() > currentDate.getTime()) {
                             length++;
                             return (
-                                <div class="w-fit">
-                                    <EventCard title={h.data.title} date={formattedDate} 
-                                    image={h.data.image ? h.data.image : 'https://img.freepik.com/free-vector/hackathon-doodle-hand-drawing-team-programmers-web-developers-managers-graphic-designers-deve_88138-1348.jpg'} 
-                                    href={h.data.link ? h.data.link : '/'}/>
+                                <div>
+                                   <EventCard title={h.data.name} date={formattedDate} description={`Hosts: ${h.data.hosts}`} 
+                                   image={h.data.image ?? 'https://img.freepik.com/free-vector/hackathon-doodle-hand-drawing-team-programmers-web-developers-managers-graphic-designers-deve_88138-1348.jpg'}
+                                   href={h.data.link ?? '/'}/> 
                                 </div>
-                                
                             );
                         }
                 
@@ -58,41 +56,41 @@ let length=0;
                     })}
             </div>
         
-            {length ==0 && <div class="font-spaceGrotesk pt-5 text-[#5F8785] lg:text-[25px] text-[20px]">No upcoming hacakthons. Stay Tuned!</div>}
+            {length == 0 && <div class="font-spaceGrotesk pt-5 text-[#5F8785] text-[20px] lg:text-[25px]">No upcoming hacknights. Stay Tuned!</div>}
              
         </div>
         <div class="flex flex-col space-y-[30px] special-font-class text-[28px]">
-            <div class="uppercase special-font-class lg:text-[50px] text-[30px]">Past Hackathons</div>
+            <div class="uppercase special-font-class lg:text-[50px] text-[30px]">Past Hacknights</div>
             <Table className="max-w-[1240px]">
                 <TableHeader>
                     <TableHead>Date</TableHead>
-                    <TableHead>Theme</TableHead>
-                    <TableHead>Judges</TableHead>
+                    <TableHead>Topic</TableHead>
+                    <TableHead>Host</TableHead>
                 </TableHeader>
                 
             
                 <TableBody> 
                 {
-                hackathons.map((h,i)=>{
+                hacknights.map((h,i)=>{
                     
                     let currentDate = new Date();
                     if(currentDate>h.data.date){
                         const date = new Date(h.data.date)
                         const formattedDate = new Intl.DateTimeFormat('en-US', {
-                                                day: 'numeric',
-                                                month: 'long',
-                                                year: 'numeric',
-                                                }).format(date);
-                       
+                        day: 'numeric',
+                        month: 'long',
+                        year: 'numeric',
+                        }).format(date);
+                                            
                         {return (
                         <TableRow key={i} className="font-spaceGrotesk text-[19px]">
                             <TableCell>{formattedDate}</TableCell>
-                            <TableCell>{h.data.title}</TableCell>
+                            <TableCell>{h.data.name}</TableCell>
                             <TableCell className="flex flex-row space-x-1">{
-                                h.data?.judges?.map((judge,i)=>
+                                h.data?.hosts?.map((host,i)=>
                                     <div>
-                                        {judge}
-                                        {h.data.judges && i!=h.data.judges.length-1 && ','}
+                                        {host}
+                                        {i!=h.data.hosts.length-1 && ','}
                                     </div>
                                 )
                             }</TableCell>
