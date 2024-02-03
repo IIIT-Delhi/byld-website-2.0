@@ -1,21 +1,18 @@
 ---
-import Footer from '@/components/Footer.astro'
-import Navbar from "@/components/Navbar.tsx"
+import Footer from "@/components/Footer.astro";
+import Navbar from "@/components/Navbar.tsx";
 ---
 
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
     <div>
-	<Navbar client:idle/>
-        <slot/>
-      <Footer/>
+      <Navbar client:idle />
+      <slot />
+      <Footer />
     </div>
-    
-    
   </body>
 </html>
