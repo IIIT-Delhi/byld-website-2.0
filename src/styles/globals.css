@@ -13,6 +13,15 @@ html {
   scroll-behavior: smooth;
 }
 
+.scrollbar-hide {
+  ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 .special-font-class {
   font-family: "Kusanagi", sans-serif;
 }

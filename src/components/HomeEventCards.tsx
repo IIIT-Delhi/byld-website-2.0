@@ -21,7 +21,7 @@ const moreStuff = Object.values(stuff);
 
 export default function EventCards() {
   return (
-    <div className="flex overflow-x-scroll flex-row w-full space-x-3 mt-10">
+    <div className="flex scrollbar-hide overflow-x-scroll flex-row w-full space-x-3 mt-10">
       {moreStuff.map((item) => (
         <EventCard key={item.title} {...item} />
       ))}
