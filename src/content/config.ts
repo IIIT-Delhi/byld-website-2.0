@@ -11,7 +11,7 @@ const hacknightCollection = defineCollection({
     hosts: z.array(z.string().optional()),
     link: z.string().optional(),
     description: z.string().optional(),
-    venue:z.string().optional()
+    venue: z.string().optional(),
   }),
 });
 
@@ -19,7 +19,7 @@ const techtalksCollection = defineCollection({
   type: "content",
   schema: z.object({
     name: z.string(),
-    speaker:z.string(),
+    speaker: z.string(),
     date: z.coerce.date(),
     image: z.string().optional(),
     link: z.string().optional(),
@@ -38,20 +38,10 @@ const hackathonCollection = defineCollection({
     link: z.string().optional(),
   }),
 });
-const projectCollection = defineCollection({
-  type: "content",
-  schema: z.object({
-    title: z.string(),
-    contributors: z.array(z.string()),
-    technlogies: z.array(z.string()),
-    status: z.string(),
-  }),
-});
 
 // 3. Export a single `collections` object to register your collection(s)
 export const collections = {
   hacknights: hacknightCollection,
   hackathons: hackathonCollection,
-  projects: projectCollection,
-  techtalks:techtalksCollection
+  techtalks: techtalksCollection,
 };
