@@ -1,0 +1,17 @@
+---
+import ProjectCards from "@/components/Projectcards.tsx";
+---
+
+<section class="md:px-20 sm:px-10 px-2.5 mt-20">
+  <div class="flex flex-row items-center space-x-3 font-spaceGrotesk">
+    <div class="w-16 h-2 bg-[#207570]"></div>
+    <span>Some stuff we made</span>
+  </div>
+  <h2 class="special-font-class text-3xl">Projects</h2>
+  <p class="font-spaceGrotesk text-[#207570] mt-6 md:w-2/3">
+    BYLD is the software development club of IIIT-Delhi. We're a bunch of
+    students who love building apps and hacks using various tools and
+    technologies.
+  </p>
+  <ProjectCards client:idle />
+</section>
