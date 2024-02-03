@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { stuff } from "@/content/home/eve.tsx";
 
 type CardProps = {
   title: string;
@@ -16,27 +17,14 @@ type CardProps = {
   href: string;
 };
 
+const moreStuff = Object.values(stuff);
+
 export default function EventCards() {
   return (
-    <div className="flex overflow-x-scroll flex-row w-full space-x-3 mt-10">
-      <EventCard
-        title="Hackathons"
-        description="Explore the fun of Hackathons with Byld"
-        image="https://iiit-delhi.github.io/byld-website/assets/images/hacknights.jpg"
-        href="/hackathons"
-      />
-      <EventCard
-        title="Hack Nights"
-        description="Come indulge in nights filled with code with Byld"
-        image="https://iiit-delhi.github.io/byld-website/assets/images/hacknights.jpg"
-        href="/hacknights"
-      />
-      <EventCard
-        title="Tech Talks"
-        description="Learn and connect with workshops with Byld"
-        image="https://iiit-delhi.github.io/byld-website/assets/images/hacknights.jpg"
-        href="techtalks"
-      />
+    <div className="flex scrollbar-hide overflow-x-scroll flex-row w-full space-x-3 mt-10">
+      {moreStuff.map((item) => (
+        <EventCard key={item.title} {...item} />
+      ))}
     </div>
   );
 }
@@ -56,7 +44,7 @@ export function EventCard({ title, description, image, href }: CardProps) {
       <CardFooter>
         <Button
           asChild
-          className="bg-black hover:bg-gray-200 hover:outline-black text-white"
+          className="bg-black hover:bg-white hover:border-3 border-black text-white"
           variant="outline"
         >
           <a href={href} className="hover:underline underline-offset-2">

@@ -39,8 +39,8 @@ export default function Navbar() {
                   )}
                 >
                   <NavigationMenuLink asChild>
-                    <a href="/" className="text-sm p-2 font-spaceGrotesk">
-                      Link
+                    <a href="/#" className="text-sm p-2 font-spaceGrotesk">
+                      Home
                     </a>
                   </NavigationMenuLink>
                 </li>
@@ -50,17 +50,7 @@ export default function Navbar() {
                     navigationMenuTriggerStyle(),
                   )}
                 >
-                  <a href="/#" className="font-spaceGrotesk">
-                    Members
-                  </a>
-                </li>
-                <li
-                  className={cn(
-                    "w-full px-3 py-1.5 text-sm",
-                    navigationMenuTriggerStyle(),
-                  )}
-                >
-                  <a href="/#" className="font-spaceGrotesk ">
+                  <a href="/#events" className="font-spaceGrotesk">
                     Events
                   </a>
                 </li>
@@ -70,21 +60,21 @@ export default function Navbar() {
                     navigationMenuTriggerStyle(),
                   )}
                 >
-                  <a href="/#" className="font-spaceGrotesk">
+                  <a href="/#projects" className="font-spaceGrotesk ">
                     Projects
                   </a>
-                </li>{" "}
+                </li>
                 <li
                   className={cn(
                     "w-full px-3 py-1.5 text-sm",
                     navigationMenuTriggerStyle(),
                   )}
                 >
-                  <a href="/#" className="font-spaceGrotesk">
+                  <a href="#contact" className="font-spaceGrotesk">
                     Contact Us
                   </a>
                 </li>
-              </ul>{" "}
+              </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
         </NavigationMenuList>
