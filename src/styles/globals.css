@@ -8,9 +8,15 @@
   font-family: "Kusanagi";
   src: url("/fonts/Kusanagi.woff") format("woff");
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 .special-font-class {
   font-family: "Kusanagi", sans-serif;
 }
+
 @layer base {
   :root {
     --background: 0 0% 100%;
