@@ -81,7 +81,7 @@ export default function Navbar() {
       </NavigationMenu>
       <div className="hidden md:flex flex-row gap-6 items-center">
         <a
-          href="https://studentcouncil.iiitd.edu.in/clubs.html"
+          href="https://byld.iiitd.edu.in/"
           target="_blank"
         >
           <img src={byldLogo.src} alt="byld-logo" className="h-5" />
