@@ -18,14 +18,14 @@ let length = 0;
 
 <MySiteLayout>
   <div
-    class="xl:px-[150px] pl-[30px] md:px-[60px] pt-[52px] flex flex-col space-y-[106px] mb-10"
+    class="md:px-20 sm:px-10 px-2.5 pt-4 md:pt-12 flex flex-col mb-10"
   >
-    <div class="flex flex-col gap-[46px]">
-      <div class="uppercase special-font-class lg:text-[50px] text-[30px]">
+    <div class="flex flex-col">
+      <div class="uppercase special-font-class text-4xl lg:text-5xl">
         Hacknights
       </div>
       <div
-        class="max-w-[65dvw] lg:text-[25px] text-[20px] font-spaceGrotesk text-[#5F8785] font-medium"
+        class="md:w-2/3 text-base mt-6 lg:text-xl font-spaceGrotesk text-[#5F8785] font-medium"
       >
         Hack Nights are weekly events organized and managed by Byld where club
         members share their knowledge of a software technology with the
@@ -33,11 +33,11 @@ let length = 0;
         sit together with their machines and code.
       </div>
     </div>
-    <div class="flex flex-col space-y-5">
-      <div class="uppercase special-font-class lg:text-[50px] text-[30px]">
+    <div class="flex flex-col space-y-5 mt-14">
+      <div class="uppercase special-font-class lg:text-5xl text-4xl">
         Upcoming Hacknights
       </div>
-      <div class="flex flex-wrap gap-10 lg:grid lg:grid-cols-3">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {
           hacknights.map((h) => {
             const currentDate = new Date();
@@ -49,7 +49,7 @@ let length = 0;
             if (new Date(h.data.date).getTime() > currentDate.getTime()) {
               length++;
               return (
-                <div>
+                <div class="w-fit mt-6">
                   <EventCard
                     title={h.data.name}
                     date={formattedDate}
@@ -75,11 +75,11 @@ let length = 0;
         )
       }
     </div>
-    <div class="flex flex-col space-y-[30px] special-font-class text-[28px]">
-      <div class="uppercase special-font-class lg:text-[50px] text-[30px]">
+    <div class="flex flex-col space-y-[30px] mt-14 special-font-class text-[28px]">
+      <div class="uppercase special-font-class lg:text-5xl text-4xl">
         Past Hacknights
       </div>
-      <Table className="max-w-[1240px]">
+      <Table className="mt-6">
         <TableHeader>
           <TableHead>Date</TableHead>
           <TableHead>Topic</TableHead>
