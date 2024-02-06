@@ -50,6 +50,18 @@ export default function Navbar() {
                     navigationMenuTriggerStyle(),
                   )}
                 >
+                  <NavigationMenuLink asChild>
+                    <a href="/members" className="text-sm p-2 font-spaceGrotesk">
+                      Members
+                    </a>
+                  </NavigationMenuLink>
+                </li>
+                <li
+                  className={cn(
+                    "w-full px-3 py-1.5 text-sm",
+                    navigationMenuTriggerStyle(),
+                  )}
+                >
                   <a href="/#events" className="font-spaceGrotesk">
                     Events
                   </a>
