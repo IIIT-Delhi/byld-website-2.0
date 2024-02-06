@@ -1,11 +1,14 @@
-{
+import vik from "@/assets/members-images/vikranth.jpg";
+import harsh from "@/assets/members-images/harsh.jpg";
+import armaan from "@/assets/members-images/armaan.jpg";
+export const team = {
     "team": [
       {
         "role": "Coordinators",
         "members": [
-          {"name": "Vikranth Udandarao", "email": "vikranth22570@iiitd.ac.in","image":"../assets/members-images/harsh.jpg"},
-          {"name": "Harsh Mistry", "email": "harsh22200@iiitd.ac.in","image":"../assets/members-images/harsh.jpg" },
-          {"name": "Armaan Singh", "email": "armaan22096@iiitd.ac.in","image":"../assets/members-images/harsh.jpg",
+          {"name": "Vikranth Udandarao", "email": "vikranth22570@iiitd.ac.in","image":vik.src},
+          {"name": "Harsh Mistry", "email": "harsh22200@iiitd.ac.in","image":harsh.src },
+          {"name": "Armaan Singh", "email": "armaan22096@iiitd.ac.in","image":armaan.src,
         "description": "web dev enthusiastically made developer"}
         ]
       },

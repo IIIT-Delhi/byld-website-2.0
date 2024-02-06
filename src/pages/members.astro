@@ -1,8 +1,8 @@
 ---
 import MysiteLayout from "@/layouts/MySiteLayout.astro";
 import "@/styles/globals.css";
-import members from "@/content/members/member.json"
-const team = JSON.parse(JSON.stringify(members));
+import { team } from "@/content/members/member";
+const team1 = JSON.parse(JSON.stringify(team));
 
 type role = {
   role: string,
@@ -24,7 +24,7 @@ type role = {
     </div>
     <div class="mt-10 flex flex-wrap md:flex-row flex-col justify-center gap-10">
           {
-            team.team.map((x:role)=>(
+            team1.team.map((x:role)=>(
               <div class={`flex flex-col items-center ${x.role=="Coordinators"?'w-full':'md:px-20'}`}>
                 <div class="font-semibold text-2xl text-center">
                   {x.role}  
@@ -39,7 +39,7 @@ type role = {
                         <div class="card">
                           <div class="content">
                             <div class="front">
-                              <img class="h-full w-full object-cover rounded-[5px]" src="" alt="">
+                              <img class="h-full w-full object-fill rounded-[5px]" src={member.image} alt="">
                             </div>
                             <div class="back">
                                 {member.description}
@@ -62,3 +62,4 @@ type role = {
     </div>
   </div>
 </MysiteLayout>
+@/content/members/member
