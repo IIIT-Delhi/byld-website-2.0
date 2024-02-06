@@ -91,7 +91,7 @@ export default function Navbar() {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      <div className="hidden md:flex flex-row gap-6 items-center">
+      <div className="flex flex-row gap-6 items-center mr-2 sm:mr-0">
         <a
           href="https://byld.iiitd.edu.in/"
           target="_blank"
