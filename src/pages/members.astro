@@ -31,7 +31,7 @@ type role = {
                 </div>
                 
                 <div class={`mt-2 flex items-center ${x.role=="Coordinators" ? 'lg:flex-row':''} flex-col`}>
-                  {x.members.map((member:{name:string,email:string,image?:string,description?:string})=>(
+                  {x.members.map((member:{name:string,email:string,image?:string,skills?:string})=>(
                     
                     <div class="text-xl w-fit text-[#207570] font-spaceGrotesk flex flex-col justify-center items-center p-5 gap-2">
                       {
@@ -39,10 +39,10 @@ type role = {
                         <div class="card">
                           <div class="content">
                             <div class="front">
-                              <img class="h-full w-full object-fill rounded-[5px]" src={member.image} alt="">
+                              <img class="h-full w-full object-cover rounded-[5px]" src={member.image} alt="">
                             </div>
-                            <div class="back">
-                                {member.description}
+                            <div class="back pl-4">
+                                Skills: <span>{member.skills}</span>
                             </div>
 
                           </div>

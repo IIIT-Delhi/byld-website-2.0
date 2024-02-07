@@ -6,10 +6,10 @@ export const team = {
       {
         "role": "Coordinators",
         "members": [
-          {"name": "Vikranth Udandarao", "email": "vikranth22570@iiitd.ac.in","image":vik.src},
-          {"name": "Harsh Mistry", "email": "harsh22200@iiitd.ac.in","image":harsh.src },
+          {"name": "Vikranth Udandarao", "email": "vikranth22570@iiitd.ac.in","image":vik.src,"skills":"HTML and Budget"},
+          {"name": "Harsh Mistry", "email": "harsh22200@iiitd.ac.in","image":harsh.src,"skills":"Flutter and Backend" },
           {"name": "Armaan Singh", "email": "armaan22096@iiitd.ac.in","image":armaan.src,
-        "description": "web dev enthusiastically made developer"}
+        "skills": "Flutter and Selenium"}
         ]
       },
       {

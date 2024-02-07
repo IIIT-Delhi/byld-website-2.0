@@ -126,7 +126,7 @@ html {
 
 .card {
   width: 300px;
-  height: 300px;
+  height: 350px;
   float: left;
   perspective: 500px;
 }
@@ -153,8 +153,6 @@ html {
   background: white;
   line-height: 300px;
   color: #207570;
-  
-  
   border-radius: 5px;
   backface-visibility: hidden;
 }
