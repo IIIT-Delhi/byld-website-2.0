@@ -6,7 +6,12 @@ export const team = {
       {
         "role": "Coordinators",
         "members": [
-          {"name": "Vikranth Udandarao", "email": "vikranth22570@iiitd.ac.in","image":vik.src,"skills":"HTML and Budget"},
+          {"name": "Vikranth Udandarao", 
+          "email": "vikranth22570@iiitd.ac.in",
+          "image":vik.src,
+          "skills":"HTML and Budget",
+          "link":"https://vikranth3140.github.io"
+          },
           {"name": "Harsh Mistry", "email": "harsh22200@iiitd.ac.in","image":harsh.src,"skills":"Flutter and Backend" },
           {"name": "Armaan Singh", "email": "armaan22096@iiitd.ac.in","image":armaan.src,
         "skills": "Flutter and Selenium"}
@@ -47,7 +52,6 @@ export const team = {
         "role": "Senior Web Developers",
         "members": [
           {"name": "Savar Bhasin", "email": "savar23497@iiitd.ac.in"},
-          {"name": "Siddhant Bali", "email": "Siddhant22496@iiitd.ac.in"},
           {"name": "Avi Avinav", "email": "avi23159@iiitd.ac.in"}
           
         ]
@@ -74,7 +78,6 @@ export const team = {
         "members": [
           {"name": "Sushant Arora", "email": "sushant23537@iiitd.ac.in"},
           {"name": "Abhishek Sethi", "email": "abhishek23030@iiitd.ac.in"},
-          {"name": "Vimal Jayant Subburaj", "email": "vimal22571@iiitd.ac.in"},
           {"name": "Aditya Gautam", "email": "aditya23043@iiitd.ac.in"}
         ]
       },
