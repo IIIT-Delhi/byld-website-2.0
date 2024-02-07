@@ -12,7 +12,7 @@ export const team = {
           "skills":"HTML and Budget",
           "link":"https://github.com/Vikranth3140"
           },
-          {"name": "Harsh Mistry", "email": "harsh22200@iiitd.ac.in","image":harsh.src,"skills":"Flutter and Backend",
+          {"name": "Harsh Mistry", "email": "harsh22200@iiitd.ac.in","image":harsh.src,"skills":"Flutter and Flask",
         "link":"https://github.com/FakePickle" },
           {"name": "Armaan Singh", "email": "armaan22096@iiitd.ac.in","image":armaan.src,
         "skills": "Flutter and Selenium","link":"https://github.com/aturtle4"}
