@@ -37,8 +37,8 @@ export function EventCard({ title, description, image, href }: CardProps) {
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
-        <div className=" flex items-center space-x-4 rounded-md border p-2">
-          <img src={image} alt="" className="rounded-md" />
+        <div className="flex items-center space-x-4 rounded-md border p-2">
+          <img src={image} alt="" className="rounded-md md:w-[400px] md:h-[300px]" />
         </div>
       </CardContent>
       <CardFooter>

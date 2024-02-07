@@ -10,11 +10,12 @@ export const team = {
           "email": "vikranth22570@iiitd.ac.in",
           "image":vik.src,
           "skills":"HTML and Budget",
-          "link":"https://vikranth3140.github.io"
+          "link":"https://github.com/Vikranth3140"
           },
-          {"name": "Harsh Mistry", "email": "harsh22200@iiitd.ac.in","image":harsh.src,"skills":"Flutter and Backend" },
+          {"name": "Harsh Mistry", "email": "harsh22200@iiitd.ac.in","image":harsh.src,"skills":"Flutter and Backend",
+        "link":"https://github.com/FakePickle" },
           {"name": "Armaan Singh", "email": "armaan22096@iiitd.ac.in","image":armaan.src,
-        "skills": "Flutter and Selenium"}
+        "skills": "Flutter and Selenium","link":"https://github.com/aturtle4"}
         ]
       },
       {
