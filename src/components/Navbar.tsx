@@ -50,6 +50,18 @@ export default function Navbar() {
                     navigationMenuTriggerStyle(),
                   )}
                 >
+                  <NavigationMenuLink asChild>
+                    <a href="/members" className="text-sm p-2 font-spaceGrotesk">
+                      Members
+                    </a>
+                  </NavigationMenuLink>
+                </li>
+                <li
+                  className={cn(
+                    "w-full px-3 py-1.5 text-sm",
+                    navigationMenuTriggerStyle(),
+                  )}
+                >
                   <a href="/#events" className="font-spaceGrotesk">
                     Events
                   </a>
@@ -79,9 +91,9 @@ export default function Navbar() {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      <div className="hidden md:flex flex-row gap-6 items-center">
+      <div className="flex flex-row gap-6 items-center mr-2 sm:mr-0">
         <a
-          href="https://studentcouncil.iiitd.edu.in/clubs.html"
+          href="https://byld.iiitd.edu.in/"
           target="_blank"
         >
           <img src={byldLogo.src} alt="byld-logo" className="h-5" />

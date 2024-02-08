@@ -1,38 +1,93 @@
 ---
 import MysiteLayout from "@/layouts/MySiteLayout.astro";
 import "@/styles/globals.css";
-import { getCollection } from "astro:content";
+import { team } from "@/content/members/member";
+const team1 = JSON.parse(JSON.stringify(team));
+
+type role = {
+  role: string,
+  members:[{
+    name: string,
+    email: string,
+    image?:string
+  }]
+}
+
+
 ---
 
 <MysiteLayout>
-  <div class="flex flex-col items-center pt-5 justify- px-[10rem]">
-    <div class="special-font-class text-[50px]">OUR TEAM</div>
-    <div class="font-spaceGrotesk text-[25px] text-[#207570]">
+  <div class="flex flex-col items-center md:items-center pt-5 lg:px-[10rem] md:px-[5rem] px-[1rem]">
+    <div class="special-font-class lg:text-5xl md:text-4xl text-3xl">OUR TEAM</div>
+    <div class="font-spaceGrotesk md:text-[25px] text-[20px] text-[#207570]">
       Meet the BYLD Team
     </div>
-    <div class="grid grid-flow-col space-x-20 mt-10 self-start">
-      <!-- {
-                members.map((m)=>{
-                    return(<div class="flex flex-col space-y-2 justify-center items-center">
-                            <div>
-                                {m.data.imgLink ? <img src={m.data.imgLink} class="w-[120px] h-[100px]"> :
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="120" height="100" viewBox="0 0 256 256" xml:space="preserve">
-                                    <defs>
-                                    </defs>
-                                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-                                        <path d="M 45 3 c 7.785 0 14.118 6.333 14.118 14.118 v 6.139 c 0 7.785 -6.333 14.118 -14.118 14.118 c -7.785 0 -14.118 -6.333 -14.118 -14.118 v -6.139 C 30.882 9.333 37.215 3 45 3 M 45 0 L 45 0 c -9.415 0 -17.118 7.703 -17.118 17.118 v 6.139 c 0 9.415 7.703 17.118 17.118 17.118 h 0 c 9.415 0 17.118 -7.703 17.118 -17.118 v -6.139 C 62.118 7.703 54.415 0 45 0 L 45 0 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                                        <path d="M 55.094 45.846 c 11.177 2.112 19.497 12.057 19.497 23.501 V 87 H 15.409 V 69.347 c 0 -11.444 8.32 -21.389 19.497 -23.501 C 38.097 47.335 41.488 48.09 45 48.09 S 51.903 47.335 55.094 45.846 M 54.639 42.727 C 51.743 44.227 48.47 45.09 45 45.09 s -6.743 -0.863 -9.639 -2.363 c -12.942 1.931 -22.952 13.162 -22.952 26.619 v 17.707 c 0 1.621 1.326 2.946 2.946 2.946 h 59.29 c 1.621 0 2.946 -1.326 2.946 -2.946 V 69.347 C 77.591 55.889 67.581 44.659 54.639 42.727 L 54.639 42.727 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                                    </g>
-                                    </svg> 
-                                }
-                                
+    <div class="mt-10 flex flex-wrap md:flex-row flex-col justify-center gap-10">
+          {
+            team1.team.map((x:role)=>(
+              <div class={`flex flex-col items-center ${x.role=="Coordinators"?'w-full':'md:px-20'}`}>
+                <div class="font-semibold text-2xl text-center">
+                  {x.role}  
+                </div>
+                
+                <div class={`mt-2 flex items-center ${x.role=="Coordinators" ? 'lg:flex-row':''} flex-col`}>
+                  {x.members.map((member:{name:string,email:string,image?:string,skills?:string,link?:string})=>(
+                    
+                    <div class="text-xl w-fit text-[#207570] font-spaceGrotesk flex flex-col justify-center items-center p-5 gap-2">
+                      {
+                        member.image && 
+                        <div class="card">
+                          <div class="content">
+                            <div class="front">
+                              <img class="h-full w-full object-cover rounded-[5px]" src={member.image} alt="">
                             </div>
-                            <div>{m.data.name}</div>
-                            <div>{m.data.role}</div>
+                            <div class="back flex flex-col space-y-5 font-spaceGrotesk items-center justify-center">
+                                <div class="flex flex-col justify-center items-center">
+                                  <span class="text-3xl">Skills:</span> 
+                                  <span class="text-2xl">{member.skills}</span>
+                                </div>
+                                <div>
+                                    {member.link && <a href={member.link} class="flex gap-4 justify-center items-center">
+                                      
+                                      <div>
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-8 w-8"
+                                        viewBox="0 0 60 60"
+                                        fill="none"
+                                      >
+                                        <g clip-path="url(#clip0_2_24)">
+                                          <path
+                                            d="M48.8227 17.7375C49.3958 15.8887 49.5796 13.9413 49.3626 12.0179C49.1456 10.0946 48.5324 8.23707 47.5617 6.5625C47.3971 6.2774 47.1604 6.04067 46.8752 5.8761C46.5901 5.71153 46.2667 5.62493 45.9375 5.625C43.7536 5.62043 41.5988 6.12671 39.6455 7.1034C37.6921 8.08009 35.9942 9.50011 34.6875 11.25H29.0625C27.7558 9.50011 26.0579 8.08009 24.1045 7.1034C22.1512 6.12671 19.9964 5.62043 17.8125 5.625C17.4833 5.62493 17.1599 5.71153 16.8748 5.8761C16.5896 6.04067 16.3529 6.2774 16.1883 6.5625C15.2176 8.23707 14.6044 10.0946 14.3874 12.0179C14.1704 13.9413 14.3542 15.8887 14.9273 17.7375C13.7689 19.7595 13.1483 22.0448 13.125 24.375V26.25C13.1289 29.4225 14.2806 32.4865 16.3674 34.8761C18.4542 37.2657 21.3351 38.8196 24.4781 39.2508C23.1952 40.8925 22.4988 42.9165 22.5 45V46.875H16.875C15.3832 46.875 13.9524 46.2824 12.8975 45.2275C11.8426 44.1726 11.25 42.7418 11.25 41.25C11.25 40.0189 11.0075 38.7998 10.5364 37.6623C10.0652 36.5249 9.37468 35.4914 8.50413 34.6209C7.63358 33.7503 6.60008 33.0598 5.46266 32.5886C4.32523 32.1175 3.10614 31.875 1.875 31.875C1.37772 31.875 0.900806 32.0725 0.549175 32.4242C0.197544 32.7758 0 33.2527 0 33.75C0 34.2473 0.197544 34.7242 0.549175 35.0758C0.900806 35.4275 1.37772 35.625 1.875 35.625C3.36684 35.625 4.79758 36.2176 5.85248 37.2725C6.90737 38.3274 7.5 39.7582 7.5 41.25C7.5 43.7364 8.48772 46.121 10.2459 47.8791C12.004 49.6373 14.3886 50.625 16.875 50.625H22.5V54.375C22.5 54.8723 22.6975 55.3492 23.0492 55.7008C23.4008 56.0525 23.8777 56.25 24.375 56.25C24.8723 56.25 25.3492 56.0525 25.7008 55.7008C26.0525 55.3492 26.25 54.8723 26.25 54.375V45C26.25 43.5082 26.8426 42.0774 27.8975 41.0225C28.9524 39.9676 30.3832 39.375 31.875 39.375C33.3668 39.375 34.7976 39.9676 35.8525 41.0225C36.9074 42.0774 37.5 43.5082 37.5 45V54.375C37.5 54.8723 37.6975 55.3492 38.0492 55.7008C38.4008 56.0525 38.8777 56.25 39.375 56.25C39.8723 56.25 40.3492 56.0525 40.7008 55.7008C41.0525 55.3492 41.25 54.8723 41.25 54.375V45C41.2512 42.9165 40.5548 40.8925 39.2719 39.2508C42.4149 38.8196 45.2958 37.2657 47.3826 34.8761C49.4694 32.4865 50.6211 29.4225 50.625 26.25V24.375C50.6017 22.0448 49.9811 19.7595 48.8227 17.7375ZM46.875 26.25C46.875 28.7364 45.8873 31.121 44.1291 32.8791C42.371 34.6373 39.9864 35.625 37.5 35.625H26.25C23.7636 35.625 21.379 34.6373 19.6209 32.8791C17.8627 31.121 16.875 28.7364 16.875 26.25V24.375C16.898 22.5001 17.4593 20.6712 18.4922 19.1062C18.6847 18.8525 18.8094 18.5538 18.8545 18.2385C18.8996 17.9231 18.8637 17.6015 18.75 17.3039C18.2616 16.0444 18.0266 14.7008 18.0583 13.3503C18.0901 11.9998 18.3881 10.6688 18.9352 9.43359C20.4696 9.59867 21.9473 10.107 23.2586 10.9209C24.5699 11.7348 25.6812 12.8333 26.5102 14.1352C26.6791 14.3993 26.9115 14.6169 27.1863 14.768C27.461 14.9191 27.7693 14.9988 28.0828 15H35.6648C35.9796 15 36.2892 14.9208 36.5653 14.7697C36.8414 14.6185 37.075 14.4003 37.2445 14.1352C38.0733 12.8332 39.1846 11.7345 40.4959 10.9207C41.8073 10.1068 43.285 9.5985 44.8195 9.43359C45.3659 10.6691 45.663 12.0002 45.694 13.3508C45.725 14.7013 45.4891 16.0447 45 17.3039C44.8867 17.5986 44.8488 17.917 44.8897 18.2301C44.9306 18.5432 45.0491 18.8412 45.2344 19.0969C46.2775 20.6619 46.8471 22.4945 46.875 24.375V26.25Z"
+                                            fill="white"></path>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_2_24">
+                                            <rect width="60" height="60" fill="white"></rect>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                      </div>
+                                      
+                                    </a>}
+                                </div>
+                            </div>
 
-                        </div>)
-                })
-            } -->
+
+                          </div>
+                        </div>
+                      }
+                      <a href={`mailto:${member.email}`} class="underline-class">
+                        {member.name}
+                      </a>
+                      
+                    </div>
+                  ))}  
+                </div>
+            </div>
+            ))
+              
+          }
     </div>
   </div>
 </MysiteLayout>

@@ -2,23 +2,26 @@
   "1": {
     "title": "Placement/Job Portal",
     "contributors": "Romil Bhardwaj, Naman Gupta",
-    "tech": "Django"
+    "tech": "Django",
+    "href":"https://iiitd.ac.in/jobform/"
   },
   "2": {
     "title": "Opine - Feedback System",
     "contributors": "Siddharth Gupta, Sarthak Bajaj",
     "tech": "Django",
-    "href": "opine.iiitd.edu.in"
+    "href": "http://opine.iiitd.edu.in"
   },
   "3": {
     "title": "FindMyStuff",
     "contributors": "Sambhav Satija, Kshitij Jain, Ankur Dohare, Magus Verma",
-    "tech": "Django"
+    "tech": "Django",
+    "href":"http://findmystuff.iiitd.edu.in/"
   },
   "4": {
     "title": "Admission Software",
     "contributors": "Gitanshu Sardana, Prateek Mehra, Gurshabad Grover, Prasoon Dwivedi, Tushar Gupta, Manav Batra",
-    "tech": "Django"
+    "tech": "Django",
+    "href":"https://www.iiitd.ac.in/admission"
   },
   "5": {
     "title": "Ticketing System",
@@ -28,11 +31,13 @@
   "6": {
     "title": "Community Work Portal",
     "contributors": "Sambhav Satija",
-    "tech": "Django"
+    "tech": "Django",
+    "href":"http://sgcw.iiitd.edu.in/student/home/"
   },
   "7": {
     "title": "Self Growth Portal",
     "contributors": "Lohitaksh Parmar, Kushagra Singh",
-    "tech": "Django"
+    "tech": "Django",
+    "href":"http://sgcw.iiitd.edu.in/student/home/"
   }
 }
