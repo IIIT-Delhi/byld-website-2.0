@@ -1,22 +1,26 @@
 ---
 import MySiteLayout from "@/layouts/MySiteLayout.astro";
 import "@/styles/globals.css";
-import { Button } from "@/components/ui/button";
 ---
 
 <MySiteLayout>
-    <div class="flex flex-col justify-center gap-10 items-center lg:min-h-[76dvh]">
-        <div>
-            
-        </div>
-        <div class="text-8xl special-font-class tracking-widest">
-            Oops!
-        </div>
-        <div class="uppercase text-4xl font-spaceGrotesk">
-            404 - Page Not found
-        </div>
-        <Button>
-            <a href="/">Go to Homepage</a>
-        </Button>
+  <div
+    class="flex flex-col -mt-20 justify-center gap-10 items-center min-h-screen"
+  >
+    <div></div>
+    <div
+      class="px-1 text-[2.75rem] md:text-5xl xl:text-7xl font-normal special-font-class"
+    >
+      Oops!
     </div>
+    <div class="uppercase text-3xl lg:text-4xl font-spaceGrotesk text-center">
+      404 - Page Not found
+    </div>
+    <button
+      class="bg-black hover:bg-white hover:border-3 border-black text-white hover:text-black rounded-md h-10 border font-spaceGrotesk px-4 py-2"
+    >
+      <a href="/" class="hover:underline underline-offset-2">Go to Homepage</a>
+    </button>
+  </div>
 </MySiteLayout>
+
