@@ -6,6 +6,7 @@ import shiv from "@/assets/members-images/shiv.jpg";
 import raghav from "@/assets/members-images/raghav.jpg";
 import devansh from "@/assets/members-images/devansh.jpg";
 import vickey from "@/assets/members-images/vickey.jpg";
+import tharun from "@/assets/members-images/tharun.jpg";
 
 export const team = {
 	team: [
@@ -43,7 +44,13 @@ export const team = {
 		},
 		{
 			role: "Secretary",
-			members: [{ name: "Tharun Harish", email: "tharun22541@iiitd.ac.in" }],
+			members: [
+				{
+					name: "Tharun Harish",
+					email: "tharun22541@iiitd.ac.in",
+					image: tharun.src,
+				},
+			],
 		},
 		{
 			role: "Dev Lead",
@@ -56,7 +63,7 @@ export const team = {
 			],
 		},
 		{
-			role: "PR Lead",
+			role: "Ops Lead",
 			members: [
 				{
 					name: "Shiv Chopra",
@@ -90,7 +97,7 @@ export const team = {
 			],
 		},
 		{
-			role: "Mentors",
+			role: "Mentor",
 			members: [
 				{
 					name: "Anirudh S. Kumar",
@@ -104,42 +111,6 @@ export const team = {
 		// 	members: [
 		// ],
 		// },
-		{
-			role: "App Developers",
-			members: [
-				{
-					name: "Harsh Aggarwal",
-					email: "harsh20508@iiitd.ac.in",
-					title: "Senior App Developer",
-				},
-				{
-					name: "Rishabh Kumar",
-					email: "rishabh22402@iiitd.ac.in",
-					title: "Senior App Developer",
-				},
-				{
-					name: "Lakshay Chauhan",
-					email: "lakshay21060@iiitd.ac.in",
-					title: "Senior App Developer",
-				},
-
-				{
-					name: "Sushant Arora",
-					email: "sushant23537@iiitd.ac.in",
-					title: "Junior App Developer",
-				},
-				{
-					name: "Abhishek Sethi",
-					email: "abhishek23030@iiitd.ac.in",
-					title: "Junior App Developer",
-				},
-				{
-					name: "Aditya Gautam",
-					email: "aditya23043@iiitd.ac.in",
-					title: "Junior App Developer",
-				},
-			],
-		},
 		{
 			role: "Web Developers",
 			members: [
@@ -173,6 +144,42 @@ export const team = {
 					name: "Sanchit Maini",
 					email: "sanchit23480@iiitd.ac.in",
 					title: "Junior Web Developer",
+				},
+			],
+		},
+		{
+			role: "App Developers",
+			members: [
+				{
+					name: "Harsh Aggarwal",
+					email: "harsh20508@iiitd.ac.in",
+					title: "Senior App Developer",
+				},
+				{
+					name: "Rishabh Kumar",
+					email: "rishabh22402@iiitd.ac.in",
+					title: "Senior App Developer",
+				},
+				{
+					name: "Lakshay Chauhan",
+					email: "lakshay21060@iiitd.ac.in",
+					title: "Senior App Developer",
+				},
+
+				{
+					name: "Sushant Arora",
+					email: "sushant23537@iiitd.ac.in",
+					title: "Junior App Developer",
+				},
+				{
+					name: "Abhishek Sethi",
+					email: "abhishek23030@iiitd.ac.in",
+					title: "Junior App Developer",
+				},
+				{
+					name: "Aditya Gautam",
+					email: "aditya23043@iiitd.ac.in",
+					title: "Junior App Developer",
 				},
 			],
 		},
