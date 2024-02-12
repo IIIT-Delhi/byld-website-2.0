@@ -11,6 +11,7 @@ type role = {
       name: string;
       email: string;
       image?: string;
+      title?: string;
     },
   ];
 };
@@ -27,7 +28,7 @@ type role = {
       Meet the BYLD Team
     </div>
     <div
-      class="mt-10 flex flex-wrap md:flex-row flex-col justify-center gap-10"
+      class="mt-10 flex flex-wrap md:flex-row flex-col font-spaceGrotesk justify-center gap-10"
     >
       {
         team1.team.map((x: role) => (
@@ -48,6 +49,7 @@ type role = {
                   link?: string;
                   ig_link?: string;
                   linkedin?: string;
+                  title?: string;
                 }) => (
                   <div class="text-xl w-fit text-[#207570] font-spaceGrotesk flex flex-col justify-center items-center p-5 gap-2">
                     {
@@ -151,6 +153,9 @@ type role = {
                     <a href={`mailto:${member.email}`} class="underline-class">
                       {member.name}
                     </a>
+                    {member.title && (
+                      <p class="text-[1.1rem] text-black">{member.title}</p>
+                    )}
                   </div>
                 ),
               )}
