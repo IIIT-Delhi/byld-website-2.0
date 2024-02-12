@@ -63,7 +63,7 @@ export const team = {
 			],
 		},
 		{
-			role: "Ops Lead",
+			role: "Events Lead",
 			members: [
 				{
 					name: "Shiv Chopra",
