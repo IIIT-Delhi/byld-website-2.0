@@ -20,18 +20,22 @@ To contribute to this code:
 
 - Run `npm install` to install all the packages, and `npm run dev` to start the development server.
 
-- Make the changes as needed and commit wit an appropriate message, we don't mandate a template for the git messages, but be descriptive take a look at other commits for reference.
+- Make the changes as needed and commit with an appropriate message, we don't mandate a template for the git messages, but be descriptive. Take a look at other commits for reference.
 
 - Once done revisit your fork and you would find a button to contribute, click this.
+
+<img src="https://i.imgur.com/p3FyTL5.png"/>
 
 - This will open a pull request for your changes to the repository. Now wait for your pull request to be reviewed and merged.
 
 ## Tools used
 
+We will not go in depth about the tools used here, please refere the documentation of the tools used in here, the links have been attached.
+
 - [Astro](https://astro.build/)
 - [React.js](https://react.dev/)
 - [TailwindCSS](https://tailwindcss.com/)
-- [Shadcn UI](https://ui.shadcn.com/docs)
+- [Shadcn UI](https://ui.shadcn.com/docs) - Read (note)[#notes] about this.
 
 ## Directory structure
 
@@ -106,6 +110,18 @@ To contribute to this code:
 - `src/pages` - All the pages in the website are stored here
 - `src/styles/globals.css` - The top-level and only css file in the whole thing, custom classes put here.
 - `src/layouts` - this directory contains the layouts for your pages
+- `src/content` - contains all the content that is to be rendered on events pages (hackathons, hacknights, techtalks) as well as projects and events section of the homepage.
+
+## Where and how to change content?
+
+### To edit events or projects on homepage
+
+You can edit according to the format of `eve.tsx` (events section) and `projects.json` (projects section) under the `src/content/home` directory to change the events and projects
+
+### To add a new event
+
+Just create a markdown file for your event under the correct directory. For example: let's say a hackathon "dummy hackathon" happened, then you will create a markdown
+file for it under the `src/content/hackathons` directory. Do not worry about sorting them into upcoming and past events, the event page will automatically sort it based on the date.
 
 ## Notes
 
