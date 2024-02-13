@@ -35,7 +35,7 @@ We will not go in depth about the tools used here, please refere the documentati
 - [Astro](https://astro.build/)
 - [React.js](https://react.dev/)
 - [TailwindCSS](https://tailwindcss.com/)
-- [Shadcn UI](https://ui.shadcn.com/docs) - Read (note)[#notes] about this.
+- [Shadcn UI](https://ui.shadcn.com/docs) - Read [note](#notes) about this.
 
 ## Directory structure
 
