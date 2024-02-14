@@ -149,6 +149,17 @@ html {
   transition: transform 1s;
 }
 
+@media (max-width: 768px) {
+  .card:hover .content {
+    transform: rotateY(0deg);
+    transition: transform 1s;
+  }
+  .card:active .content {
+    transform: rotateY(180deg);
+    transition: transform 1s;
+  }
+}
+
 .front,
 .back {
   position: absolute;

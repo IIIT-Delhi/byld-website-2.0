@@ -50,6 +50,7 @@ We will not go in depth about the tools used here, please refere the documentati
 │   ├── fonts
 │   │   └── Kusanagi.woff
 │   ├── left.svg
+│   ├── logo.svg
 │   └── right.svg
 ├── README.md
 ├── src
@@ -58,6 +59,17 @@ We will not go in depth about the tools used here, please refere the documentati
 │   │   ├── hackathons.jpg
 │   │   ├── hacknights.jpg
 │   │   ├── iiitd-logo.png
+│   │   ├── logo2.jpg
+│   │   ├── members-images
+│   │   │   ├── anirudh.jpg
+│   │   │   ├── armaan.jpg
+│   │   │   ├── devansh.jpg
+│   │   │   ├── harsh.jpg
+│   │   │   ├── raghav.jpg
+│   │   │   ├── shiv.jpg
+│   │   │   ├── tharun.jpg
+│   │   │   ├── vickey.jpg
+│   │   │   └── vikranth.jpg
 │   │   └── techtalks.jpg
 │   ├── components
 │   │   ├── About.astro
@@ -84,6 +96,8 @@ We will not go in depth about the tools used here, please refere the documentati
 │   │   ├── home
 │   │   │   ├── eve.tsx
 │   │   │   └── projects.json
+│   │   ├── members
+│   │   │   └── member.tsx
 │   │   └── techtalks
 │   │       └── techtalk-1.md
 │   ├── env.d.ts
@@ -92,10 +106,12 @@ We will not go in depth about the tools used here, please refere the documentati
 │   ├── lib
 │   │   └── utils.ts
 │   ├── pages
+│   │   ├── 404.astro
 │   │   ├── hackathons.astro
 │   │   ├── hacknights.astro
 │   │   ├── index.astro
 │   │   ├── members.astro
+│   │   ├── memburs.astro
 │   │   └── techtalks.astro
 │   └── styles
 │       └── globals.css
@@ -122,6 +138,10 @@ You can edit according to the format of `eve.tsx` (events section) and `projects
 
 Just create a markdown file for your event under the correct directory. For example: let's say a hackathon "dummy hackathon" happened, then you will create a markdown
 file for it under the `src/content/hackathons` directory. Do not worry about sorting them into upcoming and past events, the event page will automatically sort it based on the date.
+
+### To edit members
+
+Edit the `src/content/members/member.tsx` file to change members.
 
 ## Notes
 
