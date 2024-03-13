@@ -82,10 +82,6 @@ export const team = {
 				},
 			],
 		},
-		// {
-		// 	role: "Events & PR Lead",
-		// 	members: [{ name: "Ekansh Khurana", email: "ekansh21044@iiitd.ac.in" }],
-		// },
 		{
 			role: "Design Lead",
 			members: [
@@ -106,11 +102,6 @@ export const team = {
 				},
 			],
 		},
-		// {
-		// 	role: "Senior Web Developers",
-		// 	members: [
-		// ],
-		// },
 		{
 			role: "Web Developers",
 			members: [
@@ -183,7 +174,6 @@ export const team = {
 				},
 			],
 		},
-
 		{
 			role: "Design",
 			members: [

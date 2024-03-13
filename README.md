@@ -16,9 +16,20 @@ To contribute to this code:
 
 <img src="https://i.imgur.com/vEZZivz.png"/>
 
-- Clone the repository localy: `git clone https://github.com/{yourusername}/byld-website-new`
+- Clone the repository localy:
+    ```bash
+    git clone https://github.com/IIIT-Delhi/byld-website-2.0.git
+    ```
 
-- Run `npm install` to install all the packages, and `npm run dev` to start the development server.
+- Install all the packages:
+    ```bash
+    npm install
+    ```
+
+- Start the development server:
+    ```bash
+    npm run dev
+    ```
 
 - Make the changes as needed and commit with an appropriate message, we don't mandate a template for the git messages, but be descriptive. Take a look at other commits for reference.
 
@@ -147,3 +158,7 @@ Edit the `src/content/members/member.tsx` file to change members.
 
 - If someone encounters an error when using shadcn ui, like with nested ui components from it, for example, some error like: `Component A needs to be inside Component B` and you already
   have A inside B then try looking into this [article](https://spacemadness.dev/docs/add-a-shadcn-ui-component/) and the `Navbar.tsx` file in the `components` directory. This problem is caused by Astro's island architecture.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
