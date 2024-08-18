@@ -1,17 +1,14 @@
 import vik from "@/assets/members-images/vikranth.jpg";
 import harsh from "@/assets/members-images/harsh.jpg";
-import armaan from "@/assets/members-images/armaan.jpg";
-import anirudh from "@/assets/members-images/anirudh.jpg";
+import jalote from "@/assets/members-images/jalote.jpg";
 import shiv from "@/assets/members-images/shiv.jpg";
-import raghav from "@/assets/members-images/raghav.jpg";
-import devansh from "@/assets/members-images/devansh.jpg";
-import vickey from "@/assets/members-images/vickey.jpg";
-import tharun from "@/assets/members-images/tharun.jpg";
+import aditi from "@/assets/members-images/aditi.jpg";
+import aaman from "@/assets/members-images/aaman.jpg";
 
 export const team = {
 	team: [
 		{
-			role: "Coordinators",
+			role: "Admin",
 			members: [
 				{
 					name: "Vikranth Udandarao",
@@ -31,39 +28,20 @@ export const team = {
 					ig_link: "https://www.instagram.com/ig.hxrsh/",
 					linkedin: "https://www.linkedin.com/in/harsh-mistry-977094252/",
 				},
+			],
+		},
+		{
+			role: "Faculty Coordinator",
+			members: [
 				{
-					name: "Armaan Singh",
-					email: "armaan22096@iiitd.ac.in",
-					image: armaan.src,
-					skills: "Flutter & Selenium",
-					link: "https://github.com/aturtle4",
-					ig_link: "https://www.instagram.com/aturtle_4/",
-					linkedin: "https://www.linkedin.com/in/armaan-singh23/",
+					name: "Dr. Pankaj Jalote Chopra",
+					email: "jalote@iiitd.ac.in",
+					image: jalote.src,
 				},
 			],
 		},
 		{
 			role: "Secretary",
-			members: [
-				{
-					name: "Tharun Harish",
-					email: "tharun22541@iiitd.ac.in",
-					image: tharun.src,
-				},
-			],
-		},
-		{
-			role: "Dev Lead",
-			members: [
-				{
-					name: "Vickey Kumar",
-					email: "vickey21299@iiitd.ac.in",
-					image: vickey.src,
-				},
-			],
-		},
-		{
-			role: "Events Lead",
 			members: [
 				{
 					name: "Shiv Chopra",
@@ -72,13 +50,33 @@ export const team = {
 				},
 			],
 		},
+		// {
+		// 	role: "Dev Lead",
+		// 	members: [
+		// 		{
+		// 			name: "Vickey Kumar",
+		// 			email: "vickey21299@iiitd.ac.in",
+		// 			image: vickey.src,
+		// 		},
+		// 	],
+		// },
+		// {
+		// 	role: "Events Lead",
+		// 	members: [
+		// 		{
+		// 			name: "Shiv Chopra",
+		// 			email: "shiv23503@iiitd.ac.in",
+		// 			image: shiv.src,
+		// 		},
+		// 	],
+		// },
 		{
 			role: "PR Lead",
 			members: [
 				{
-					name: "Raghav Mittal",
-					email: "raghav23415@iiitd.ac.in",
-					image: raghav.src,
+					name: "Aaman Sheik",
+					email: "aaman23006@iiitd.ac.in",
+					image: aaman.src,
 				},
 			],
 		},
@@ -86,101 +84,10 @@ export const team = {
 			role: "Design Lead",
 			members: [
 				{
-					name: "Devansh Kumar",
-					email: "devansh22152@iiitd.ac.in",
-					image: devansh.src,
+					name: "Aditi Srivastav",
+					email: "aditi22026@iiitd.ac.in",
+					image: aditi.src,
 				},
-			],
-		},
-		{
-			role: "Mentor",
-			members: [
-				{
-					name: "Anirudh S. Kumar",
-					email: "anirudh21517@iiitd.ac.in",
-					image: anirudh.src,
-				},
-			],
-		},
-		{
-			role: "Web Developers",
-			members: [
-				{
-					name: "Savar Bhasin",
-					email: "savar23497@iiitd.ac.in",
-					title: "Senior Web Developer",
-				},
-				{
-					name: "Avi Avinav",
-					email: "avi23159@iiitd.ac.in",
-					title: "Senior Web Developer",
-				},
-
-				{
-					name: "Aaman Sheikh",
-					email: "aaman23006@iiitd.ac.in",
-					title: "Junior Web Developer",
-				},
-				{
-					name: "Rahul Jha",
-					email: "rahul22389@iiitd.ac.in",
-					title: "Junior Web Developer",
-				},
-				{
-					name: "Shreyansh Srivastav",
-					email: "shreyansh22485@iiitd.ac.in",
-					title: "Junior Web Developer",
-				},
-				{
-					name: "Sanchit Maini",
-					email: "sanchit23480@iiitd.ac.in",
-					title: "Junior Web Developer",
-				},
-			],
-		},
-		{
-			role: "App Developers",
-			members: [
-				{
-					name: "Harsh Aggarwal",
-					email: "harsh20508@iiitd.ac.in",
-					title: "Senior App Developer",
-				},
-				{
-					name: "Rishabh Kumar",
-					email: "rishabh22402@iiitd.ac.in",
-					title: "Senior App Developer",
-				},
-				{
-					name: "Lakshay Chauhan",
-					email: "lakshay21060@iiitd.ac.in",
-					title: "Senior App Developer",
-				},
-
-				{
-					name: "Sushant Arora",
-					email: "sushant23537@iiitd.ac.in",
-					title: "Junior App Developer",
-				},
-				{
-					name: "Abhishek Sethi",
-					email: "abhishek23030@iiitd.ac.in",
-					title: "Junior App Developer",
-				},
-				{
-					name: "Aditya Gautam",
-					email: "aditya23043@iiitd.ac.in",
-					title: "Junior App Developer",
-				},
-			],
-		},
-		{
-			role: "Design",
-			members: [
-				{ name: "Aarushi Chawla", email: "aarushi23012@iiitd.ac.in" },
-				{ name: "Anouska Sahoo", email: "anouska23096@iiitd.ac.in" },
-				{ name: "Aditi Srivastav", email: "aditi22026@iiitd.ac.in" },
-				{ name: "Aayush Kumar", email: "aayush23015@iiitd.ac.in" },
 			],
 		},
 	],
